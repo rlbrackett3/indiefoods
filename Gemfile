@@ -45,6 +45,7 @@ group :development, :test do
   gem 'fuubar'
   # integration testing with cucumber
   gem 'cucumber-rails'
+  gem 'pickle'
   gem 'launchy' # So you can do Then show me the page
   gem 'fuubar-cucumber'
   gem 'slowhandcuke'

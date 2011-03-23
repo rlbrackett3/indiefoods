@@ -118,6 +118,9 @@ GEM
     mime-types (1.16)
     nokogiri (1.4.4)
     pg (0.10.1)
+    pickle (0.4.6)
+      cucumber (>= 0.8)
+      rake
     polyglot (0.3.1)
     rack (1.2.2)
     rack-mount (0.6.13)
@@ -215,6 +218,7 @@ DEPENDENCIES
   kaminari
   launchy
   pg
+  pickle
   rails (= 3.0.5)
   rails3-generators
   rspec-rails (~> 2.4)
