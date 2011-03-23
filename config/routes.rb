@@ -1,5 +1,7 @@
 Indiefoods::Application.routes.draw do
 
+  devise_for :users
+
   # Pages Controller
   get "pages/home"
   get "pages/about"

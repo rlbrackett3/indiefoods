@@ -11,8 +11,9 @@ gem 'thin'
 # gem 'heroku'
 
 # authentication with devise
-gem 'devise'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'cancan'
+gem 'omniauth'
 
 # Using Jqery JS library
 gem 'jquery-rails'
