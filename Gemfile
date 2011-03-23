@@ -1,31 +1,66 @@
 source 'http://rubygems.org'
 
+# rails
 gem 'rails', '3.0.5'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+# using postgresql as development database
 gem 'pg'
+gem 'thin'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+# Deploying with heroku
+# gem 'heroku'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# authentication with devise
+gem 'devise'
+gem 'cancan'
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
+# Using Jqery JS library
+gem 'jquery-rails'
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
+# pagination
+gem 'kaminari'
 
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+# HAML support
+gem 'haml'
+
+group :development do
+  # manage heroku environment with heroku_config.yml
+  # gem 'heroku-rails'
+  # generators for rails 3
+  gem 'rails3-generators'
+  # HAML support
+  gem 'haml-rails'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  # annotate sql models
+  gem 'annotate'
+end
+
+group :development, :test do
+  # generating sample data for tests and development
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+  # bdd with rspec
+  gem "rspec-rails", "~> 2.4"
+  gem 'fuubar'
+  # integration testing with cucumber
+  gem 'cucumber-rails'
+  gem 'launchy' # So you can do Then show me the page
+  gem 'fuubar-cucumber'
+  gem 'slowhandcuke'
+  # continuous testing with autotest and spork
+  gem 'autotest'
+  gem 'autotest-notification'
+  gem 'spork', '~> 0.9.0.rc'
+  # ruby debugger
+  gem 'ruby-debug19' if RUBY_VERSION.include? "1.9"
+  gem 'ruby-debug' if RUBY_VERSION.include? "1.8"
+end
+  
+group :test do
+  # browser simulation
+  gem 'capybara'
+  # clearing the db for testing
+  gem 'database_cleaner'
+end
+
