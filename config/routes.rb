@@ -1,4 +1,13 @@
 Indiefoods::Application.routes.draw do
+
+  # Pages Controller
+  get "pages/home"
+  get "pages/about"
+  get "pages/terms"
+  
+  # Site Root
+  root :to => "pages#home"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
