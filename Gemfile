@@ -58,6 +58,8 @@ group :development, :test do
 end
   
 group :test do
+  #rspec matchers
+  gem 'shoulda'
   # browser simulation
   gem 'capybara'
   # clearing the db for testing
